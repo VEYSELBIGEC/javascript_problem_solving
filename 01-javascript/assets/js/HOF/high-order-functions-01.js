@@ -61,11 +61,11 @@
 
 // d) 5) final: shortest!
 
-// const numbers = [1, -1, 2, 3] ;
-// const items = numbers
-// .filter(num => num >= 0)
-// .map(num => ({value: num }));
-// console.log(items);        // gives us 
+const numbers = [1, -1, 2, 3] ;
+const items = numbers
+.filter(num => num >= 0)
+.map(num => ({value: num }));
+console.log(items);        // gives us 
 //           [ { value: 1 }, { value: 2 }, { value: 3 } ]
 
 
