@@ -1,4 +1,4 @@
-// filter & map
+// filter & map  - Examples: 01
 
 // a)
 
@@ -68,5 +68,7 @@
 // console.log(items);        // gives us 
 //           [ { value: 1 }, { value: 2 }, { value: 3 } ]
 
+
+// filter & map  - Examples: 02
 
 
