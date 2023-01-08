@@ -8,10 +8,10 @@
 
 // b)
 
-const numbers = [1, -1, 2, 3] ;
-const filtered = numbers.filter(num => num >= 0);
-const items = filtered.map(num => '<li>' + num + '</li>') ;
-console.log(items);        // gives us 
+// const numbers = [1, -1, 2, 3] ;
+// const filtered = numbers.filter(num => num >= 0);
+// const items = filtered.map(num => '<li>' + num + '</li>') ;
+// console.log(items);        // gives us 
 // //           [ '<li>1</li>', '<li>2</li>', '<li>3</li>' ]
 
 // c)
@@ -70,5 +70,47 @@ console.log(items);        // gives us
 
 
 // filter & map  - Examples: 02
+
+
+
+// reduce  - Examples: 01
+
+// a) old way of writing of code!
+
+const numbers = [1, -1, 2, 3] ;
+
+// let sum = 0;
+// for (let num of numbers)
+// sum += num;
+// console.log(sum);
+
+// b) reduce - let's see what is happening!
+
+// initially we said accumulator is zero; So, accumulator = 0,
+// in the first round current value will be set to the first number of the aaray; so, current value = 1,
+// as a result accumulator will be 1!
+
+// accumulator = 0, current value = 1, => accumulator = 1    (0 + 1 = 1) (first round!)
+// accumulator = 1, current value = -1, => accumulator = 0    (1 + (-1) = 0) (second round!)
+// accumulator = 0, current value = 2, => accumulator = 2    (0 + 2 = 2) (third round!)
+// accumulator = 2, current value = 3, => accumulator = 5    (0 + 2 = 5) (last call - final round!)
+
+// const sum = numbers.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue
+// }, 0);
+// console.log(sum);        // gives us [ 5 (total) ]
+
+// b) reduce - shorter!
+
+// now, we can make this code even shorter, we can get rid of this return key word because we have a single line
+// and we are simply returning a value, so remove the return key word, semicolon and the curly braces, finally put everthing on a single line
+
+const sum = numbers.reduce(
+    (accumulator, currentValue) => accumulator + currentValue
+);
+console.log(sum);        // gives us [ 5 (total) ]
+
+
+
 
 
