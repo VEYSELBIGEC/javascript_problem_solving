@@ -69,7 +69,7 @@
 //           [ { value: 1 }, { value: 2 }, { value: 3 } ]
 
 
-// filter & map  - Examples: 02
+// ..........................................
 
 
 
@@ -77,7 +77,7 @@
 
 // a) old way of writing of code!
 
-const numbers = [1, -1, 2, 3] ;
+// const numbers = [1, -1, 2, 3] ;
 
 // let sum = 0;
 // for (let num of numbers)
@@ -105,11 +105,18 @@ const numbers = [1, -1, 2, 3] ;
 // now, we can make this code even shorter, we can get rid of this return key word because we have a single line
 // and we are simply returning a value, so remove the return key word, semicolon and the curly braces, finally put everthing on a single line
 
-const sum = numbers.reduce(
-    (accumulator, currentValue) => accumulator + currentValue
-);
-console.log(sum);        // gives us [ 5 (total) ]
+// const sum = numbers.reduce(
+//     (accumulator, currentValue) => accumulator + currentValue
+// );
+// console.log(sum);        // gives us [ 5 (total) ]
 
+
+// reduce  - more details!  Examples: 02
+
+const numbers = [1, 2, 3, 4, 5] ;
+const total = numbers.reduce ((acc, val) => (acc + val),0);
+console.log(total);
+console.log(numbers);
 
 
 
