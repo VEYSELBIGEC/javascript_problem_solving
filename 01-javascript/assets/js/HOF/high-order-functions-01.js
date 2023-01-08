@@ -73,7 +73,9 @@
 
 
 
-// reduce  - Examples: 01
+// reduce  - Examples: 01 
+
+// Calculate the total value of the numbers in the array;
 
 // a) old way of writing of code!
 
@@ -111,13 +113,69 @@
 // console.log(sum);        // gives us [ 5 (total) ]
 
 
-// reduce  - more details!  Examples: 02
+// Array reduce Method - more details!  Examples: 02
 
-const numbers = [1, 2, 3, 4, 5] ;
-const total = numbers.reduce ((acc, val) => (acc + val),0);
-console.log(total);
-console.log(numbers);
+// The array reduce method executes a callback function (or a reducer function) on every elements of an array and it will return one single output value!
+// Think of it like getting an array of items and then adding all of the items inside one resulting value.
+// The reducer function's returned value is assigned to the accumulator, which can be used across each iteration and ultimately becomes the final, single resulting value.
 
+//  A) Calculate the total value of the numbers in the array;
+
+// const numbers = [1, 2, 3, 4, 5] ;
+// const total = numbers.reduce ((acc, val) => (acc + val),0);
+// console.log(total);     // gives us 15 (total value)
+// console.log(numbers);   // gives us [1, 2, 3, 4, 5] DOES NOT MODIFY THE ARRAY !
+
+// B) find the max value in the array!
+
+// const max = numbers.reduce(callback, -Infinity);
+// function callback(accumulator, value) {
+//     if (accumulator > value){
+//         return accumulator;
+//     } else {
+//         return value;
+//     }   
+// }
+// console.log(max);     // gives us 5 (max value)
+
+// C) find the min value in the array!
+
+// const min = numbers.reduce (callback, +Infinity);
+// function callback(accumulator, value) {
+//     if (accumulator < value){
+//         return accumulator;
+//     } else {
+//         return value;
+//     }   
+// }
+// console.log(min);     // gives us 1 (min value)
+
+
+// reduce  - more details!  Examples: 03
+
+// const store = [
+//     {product: 'laptop',
+//     value: 1000,
+//     count: 3
+//     },
+//     {product: 'desktop',
+//     value: 1500,
+//     count: 4
+//     },
+//     {product: 'mobile',
+//     value: 500,
+//     count: 10
+//     }
+// ];
+
+// const totalValueStore = store.reduce(
+//     (acc, val) => acc + val.value * val.count,
+//     0
+//     );
+//     console.log(totalValueStore); // gives us 14000 (total value) (1000x3 = 3000
+                                                                 // 1500x4 = 6000
+                                                                 // 500x10 = 5000
+                                                                  // total = 3000 + 6000 + 5000 = 14000)
 
 
 
