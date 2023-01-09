@@ -192,7 +192,7 @@
 
 //  but what happens if we want to sort an array of numbers ?
 
-const numbers = [3, 1, 5, 13, 22, 29, 104, 58] ;
+// const numbers = [3, 1, 5, 13, 22, 29, 104, 58] ;
 // numbers.sort();
 // console.log(numbers);   // gives us [1, 104, 13, 22, 29, 3, 5, 58]
                         // but we were expecting the result as [1, 3, 5, 13, 22, 29, 58, 104]! then, what is the problem in here?
@@ -206,18 +206,48 @@ const numbers = [3, 1, 5, 13, 22, 29, 104, 58] ;
 //   3) if the return of this function is greater than zero; b will come first,
 
 
-numbers.sort(compareFunction);
+// numbers.sort(compareFunction);
 
-console.log(numbers);   // gives us now [1, 3, 5, 13, 22, 29, 58, 104]
+// console.log(numbers);   // gives us now [1, 3, 5, 13, 22, 29, 58, 104]
                         
-function compareFunction(a, b) {     //  callback function !
-    // if return < 0 ... a comes first
-    // if return = 0 ... nothing will be changed,
-    // if return > 0 ... b comes first
-    return a - b ;
-}    
+// function compareFunction(a, b) {     //  callback function !
+//     // if return < 0 ... a comes first
+//     // if return = 0 ... nothing will be changed,
+//     // if return > 0 ... b comes first
+//     return a - b ;
+// }    
 
 // ..........................................
 
 // Array sort Method -  Examples: 02
 // The sort method can work even with an array of objects 
+
+// const products = [
+//     {
+//         name: 'laptop',
+//         price: 1000,
+//     },
+//     {
+//         name: 'desktop',
+//         price: 1500,     
+//     },
+//     {
+//         name: 'mobile',
+//         price: 500,    
+//     }
+// ];
+
+// products.sort();
+// console.log(products);  // gives us  [ {name: 'laptop', price: 1000}, 
+                                     //   {name: 'desktop', price: 1500}, 
+                                     //   {name: 'mobile', price: 500} ]
+
+                                    //  to fix this problem, let's write compare function!
+
+// products.sort((a,b) => {        // we can write it even shorter products.sort((a,b) => a.price - b.price) !
+//     return a.price - b.price ;  // if we want to sort them in descending order we can just write b.price - a.price
+// });
+// console.log(products);  // gives us now [ {name: 'desktop', price: 1500},   
+                                        //   {name: 'laptop', price: 1000},
+                                        //   {name: 'mobile', price: 500} ]
+
