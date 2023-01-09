@@ -192,6 +192,8 @@
 
 //  but what happens if we want to sort an array of numbers ?
 
+// .......................................................
+
 // const numbers = [3, 1, 5, 13, 22, 29, 104, 58] ;
 // numbers.sort();
 // console.log(numbers);   // gives us [1, 104, 13, 22, 29, 3, 5, 58]
@@ -211,6 +213,7 @@
 // console.log(numbers);   // gives us now [1, 3, 5, 13, 22, 29, 58, 104]
                         
 // function compareFunction(a, b) {     //  callback function !
+
 //     // if return < 0 ... a comes first
 //     // if return = 0 ... nothing will be changed,
 //     // if return > 0 ... b comes first
@@ -250,4 +253,38 @@
 // console.log(products);  // gives us now [ {name: 'desktop', price: 1500},   
                                         //   {name: 'laptop', price: 1000},
                                         //   {name: 'mobile', price: 500} ]
+
+
+
+// ..........................................
+// Array reverse Method -  Examples: 01 (it modifies = changes the original array!)
+
+// a)
+
+// const numbers = [1, 2, 3, 4, 5] ;
+// numbers.reverse();
+// console.log(numbers);  // gives us [5, 4, 3, 2, 1]
+
+//  if we do not want to change the original array; we store the new array and create a shallow copy of this array using the concat method !
+
+// b)
+
+// const numbers = [1, 2, 3, 4, 5] ;
+// const newArr = numbers.concat().reverse();           
+//  or 
+// const newArr = [...numbers].reverse(); (same thing with the line 273!)
+// it is basicall same thing, we are creating a new array and reversing the the elements inside the array ! 
+// console.log(numbers);  // gives us [1, 2, 3, 4, 5]
+// console.log(newArr);  // gives us [5, 4, 3, 2, 1]
+
+// .............................
+
+const str = 'Hello World' ;
+const reversedStr = str.split('').reverse().join('') ;
+console.log(reversedStr);  // gives us 'dlroW olleH'
+
+// .............................
+
+
+
 
