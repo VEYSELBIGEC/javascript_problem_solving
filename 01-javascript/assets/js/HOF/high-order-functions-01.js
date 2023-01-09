@@ -184,11 +184,11 @@
 
 // We're also learning why the sort method doesn't work by default on an array of numbers and how we can fix that.
 // the default sort order is ascending !
-// it will convert the elements from the array to strings then it will compare their sequences of utf-16 code units values
+// it will convert the elements from the array to strings then it will compare their sequences of utf-16 code unit values
 
-// const names = ['veysel', 'bigec', 'yuksel', 'saliha'];
+// const names = ['veysel', 'vedat', 'bigec', 'yuksel', 'saliha', 'veli'];
 // names.sort();
-// console.log(names); // gives us ['bigec', 'saliha', 'veysel', 'yuksel'] 
+// console.log(names); // gives us ['bigec', 'saliha', 'vedat', 'veli', 'veysel', 'yuksel']
 
 //  but what happens if we want to sort an array of numbers ?
 
